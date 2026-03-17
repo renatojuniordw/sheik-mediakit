@@ -56,10 +56,10 @@ export const SobreSection = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-display text-[clamp(48px,6vw,84px)] leading-[0.9] tracking-tighter text-white mb-8"
             >
-              MOTOBOY DE DIA,
+              CRIADOR DE CONTEÚDO,
               <br />
               <span className="text-cyan underline decoration-cyan/30 decoration-4 underline-offset-8 italic drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
-                VIRAL DE NOITE.
+                VIRAL O TEMPO TODO.
               </span>
             </motion.h2>
 
