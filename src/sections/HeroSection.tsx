@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Ticker } from "../components/Ticker";
 import { useScrollSnap } from "../hooks/useScrollSnap";
 
 const prefersReduced = window.matchMedia(
