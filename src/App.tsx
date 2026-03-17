@@ -1,5 +1,6 @@
 import { CustomCursor } from './components/CustomCursor'
 import { Nav } from './components/Nav'
+import { SeoMeta } from './components/SeoMeta'
 import { ScrollSnapContainer } from './components/ScrollSnapContainer'
 import { useActiveSection } from './hooks/useActiveSection'
 import { HeroSection } from './sections/HeroSection'
@@ -17,17 +18,20 @@ function App() {
 
   return (
     <>
+      <SeoMeta />
       <CustomCursor />
       <Nav activeSection={activeSection} />
-      <ScrollSnapContainer>
-        <HeroSection />
-        <SobreSection />
-        <NumerosSection />
-        <AudienciaSection />
-        <FormatosSection />
-        <CasesSection />
-        <ContatoSection />
-      </ScrollSnapContainer>
+      <main>
+        <ScrollSnapContainer>
+          <HeroSection />
+          <SobreSection />
+          <NumerosSection />
+          <AudienciaSection />
+          <FormatosSection />
+          <CasesSection />
+          <ContatoSection />
+        </ScrollSnapContainer>
+      </main>
     </>
   )
 }

@@ -13,11 +13,30 @@ const CONTATO_STATS = [
   { value: STATS.growth, label: "crescimento em 30 dias" },
 ];
 
+const FAQS = [
+  {
+    question: "Que marcas combinam com o perfil de Diego Sheik?",
+    answer:
+      "Marcas que querem awareness, lembranca e compartilhamento performam bem com o tom espontaneo do criador, especialmente em humor, varejo, servicos, food, eventos e produtos do dia a dia.",
+  },
+  {
+    question: "Qual formato costuma gerar mais alcance organico?",
+    answer:
+      "O Reel patrocinado e o formato principal do midia kit porque conversa com o comportamento atual da audiencia e concentra 98,4% das interacoes informadas.",
+  },
+  {
+    question: "Os dados do midia kit sao auditaveis?",
+    answer:
+      "Sim. Os indicadores apresentados foram organizados a partir do painel profissional do Instagram e indicam claramente o periodo de referencia usado na analise.",
+  },
+];
+
 export const ContatoSection = () => {
   return (
     <section
       id="contato"
       className="snap-section flex flex-col relative bg-black"
+      aria-labelledby="contato-title"
     >
       <div className="flex-1 flex flex-col md:flex-row relative z-10">
         {/* Left — Dynamic Lead/Cyan */}
@@ -45,7 +64,10 @@ export const ContatoSection = () => {
               </p>
             </motion.div>
 
-            <h2 className="font-display text-[clamp(48px,6vw,92px)] leading-none tracking-tighter text-white mb-8">
+            <h2
+              id="contato-title"
+              className="font-display text-[clamp(48px,6vw,92px)] leading-none tracking-tighter text-white mb-8"
+            >
               CONECTE SUA MARCA AOS{" "}
               <span className="text-cyan drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
                 MILHÕES.
@@ -56,6 +78,19 @@ export const ContatoSection = () => {
               "Viralização não é sorte, é estratégia. Vamos transformar seu
               produto na próxima trend do Diego Sheik."
             </p>
+
+            <div className="mt-8 max-w-xl space-y-3 text-sm text-white/70 leading-relaxed">
+              <p>
+                Este midia kit foi estruturado para facilitar a avaliacao de
+                marcas, agencias e equipes de marketing sobre alcance, publico
+                e formatos comerciais.
+              </p>
+              <p>
+                Base de metricas: <span className="text-white">{STATS.period}</span>.
+                Ultima atualizacao editorial:{" "}
+                <span className="text-white">17 mar 2026</span>.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 relative z-10">
@@ -95,6 +130,24 @@ export const ContatoSection = () => {
               </p>
             </div>
           ))}
+
+          <div className="p-10 border-t border-white/5 bg-black/10">
+            <p className="font-mono text-[10px] tracking-[4px] uppercase text-cyan mb-5">
+              FAQ para marcas e agencias
+            </p>
+            <div className="space-y-5">
+              {FAQS.map(({ question, answer }) => (
+                <article key={question}>
+                  <h3 className="text-sm font-bold text-white mb-1">
+                    {question}
+                  </h3>
+                  <p className="text-sm text-white/65 leading-relaxed">
+                    {answer}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
 
           {/* Bottom Branding */}
           <div className="mt-auto p-10 flex justify-between items-center bg-black/20">

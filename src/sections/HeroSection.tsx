@@ -18,7 +18,11 @@ export const HeroSection = () => {
   const { scrollTo } = useScrollSnap();
 
   return (
-    <section id="hero" className="snap-section relative flex flex-col">
+    <section
+      id="hero"
+      className="snap-section relative flex flex-col"
+      aria-labelledby="hero-title"
+    >
       {/* Background */}
       <div className="absolute inset-0">
         {/*
@@ -38,8 +42,11 @@ export const HeroSection = () => {
         */}
         <img
           src="/assets/diego-hero.jpg"
-          alt="Diego Sheik"
+          alt="Diego Sheik em foto de apresentacao do midia kit"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
         />
         {/* Dark overlay */}
         <div
@@ -74,7 +81,7 @@ export const HeroSection = () => {
             aria-hidden="true"
           />
           <span className="font-mono text-[10px] tracking-[4px] uppercase text-white/80">
-            Motoboy · Criador de Conteúdo · Recife-PE
+            Criador de Conteúdo · Recife-PE
           </span>
         </motion.div>
 
@@ -92,17 +99,25 @@ export const HeroSection = () => {
 
           <div className="relative z-10">
             <motion.h1
+              id="hero-title"
               {...fadeUp(0.2)}
               className="font-display text-[clamp(60px,12vw,160px)] leading-[0.85] tracking-tighter text-white"
             >
               DIEGO
+              <br />
+              <span
+                className="text-cyan drop-shadow-[0_0_30px_rgba(0,240,255,0.3)]"
+              >
+                SHEIK
+              </span>
             </motion.h1>
-            <motion.h1
+            <motion.p
               {...fadeUp(0.3)}
-              className="font-display text-[clamp(60px,12vw,160px)] leading-[0.85] tracking-tighter text-cyan drop-shadow-[0_0_30px_rgba(0,240,255,0.3)]"
+              className="font-mono text-[10px] tracking-[4px] uppercase text-white/65 mt-3"
             >
-              SHEIK
-            </motion.h1>
+              Midia kit oficial para publicidade, Reels patrocinados e campanhas
+              com marcas
+            </motion.p>
           </div>
         </div>
 
@@ -119,7 +134,13 @@ export const HeroSection = () => {
             <span className="text-acid italic">piores</span> perguntas."
           </p>
           <p className="text-sm text-white/65 mt-2 font-mono tracking-tight uppercase">
-            15,7 milhões de views mensais · Alcance orgânico brutal
+            Criador de conteudo de humor em Recife-PE com 15,7 milhoes de views
+            no periodo analisado
+          </p>
+          <p className="text-sm text-white/70 mt-3 leading-relaxed">
+            Diego Sheik conecta humor regional, linguagem popular e alta taxa
+            de compartilhamento para campanhas com marcas que buscam alcance
+            organico e lembranca de mensagem.
           </p>
         </motion.div>
 
@@ -131,14 +152,14 @@ export const HeroSection = () => {
           <button
             onClick={() => scrollTo("contato")}
             className="group relative px-8 py-4 font-mono text-xs tracking-widest uppercase font-bold transition-all duration-300 overflow-hidden"
-            style={{ backgroundColor: 'var(--cyan)', color: '#ffffff' }}
+            style={{ backgroundColor: "var(--cyan)", color: "#ffffff" }}
             onMouseEnter={(e) => {
-              const el = e.currentTarget
-              el.style.color = '#000000'
+              const el = e.currentTarget;
+              el.style.color = "#000000";
             }}
             onMouseLeave={(e) => {
-              const el = e.currentTarget
-              el.style.color = '#ffffff'
+              const el = e.currentTarget;
+              el.style.color = "#ffffff";
             }}
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -154,12 +175,12 @@ export const HeroSection = () => {
             onClick={() => scrollTo("numeros")}
             className="group px-8 py-4 border border-white/40 text-white font-mono text-xs tracking-widest uppercase transition-all duration-300"
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'var(--acid)'
-              e.currentTarget.style.color = 'var(--acid)'
+              e.currentTarget.style.borderColor = "var(--acid)";
+              e.currentTarget.style.color = "var(--acid)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'
-              e.currentTarget.style.color = '#ffffff'
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)";
+              e.currentTarget.style.color = "#ffffff";
             }}
           >
             Ver Métricas →

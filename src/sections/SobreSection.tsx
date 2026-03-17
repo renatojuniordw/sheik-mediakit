@@ -9,7 +9,6 @@ const PILLS = [
   "Humor",
   "Reels Interativos",
   "Recife-PE",
-  "Motoboy",
   "+50Mi views",
   "Conta verificada",
 ];
@@ -29,6 +28,7 @@ export const SobreSection = () => {
       id="sobre"
       className="snap-section relative bg-black"
       style={{ backgroundColor: "var(--black)" }}
+      aria-labelledby="sobre-title"
     >
       {/* Background Decorative element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-lead/50 skew-x-[-12deg] translate-x-1/4 pointer-events-none" />
@@ -49,6 +49,7 @@ export const SobreSection = () => {
             </motion.div>
 
             <motion.h2
+              id="sobre-title"
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,9 +71,9 @@ export const SobreSection = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-lg text-white/70 leading-relaxed"
               >
-                Diego é o reflexo da autenticidade recifense. Motoboy por
-                profissão, criador por instinto. Ele transforma o cotidiano e as
-                "piores" perguntas em conteúdo magnético.
+                Diego é o reflexo da autenticidade recifense. Ele transforma o cotidiano e as
+                "piores" perguntas em conteudo magnetico, com linguagem local,
+                humor espontaneo e forte potencial de compartilhamento.
               </motion.p>
 
               <motion.p
@@ -89,6 +90,18 @@ export const SobreSection = () => {
                 </span>
                 . O resultado? Mais de 50 milhões de views e uma audiência que
                 respira cada frame.
+              </motion.p>
+
+              <motion.p
+                initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+                whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+                className="text-base text-white/60 leading-relaxed"
+              >
+                Para marcas, isso significa uma entrega que combina alcance,
+                contexto cultural e insercao natural do produto em formatos que
+                ja performam organicamente no Instagram.
               </motion.p>
             </div>
 
@@ -140,8 +153,10 @@ export const SobreSection = () => {
               <div className="overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
                 <img
                   src="/assets/diego-sobre.jpg"
-                  alt="Diego Sheik"
+                  alt="Diego Sheik em retrato usado na secao sobre do midia kit"
                   className="w-full object-cover aspect-[4/5] scale-105 hover:scale-100 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-cyan/5 mix-blend-overlay" />
               </div>
@@ -172,6 +187,11 @@ export const SobreSection = () => {
                 </div>
               ))}
             </motion.div>
+
+            <p className="font-mono text-[9px] tracking-[3px] uppercase text-white/45">
+              Posicionamento: humor regional, branded content e alcance
+              nacional.
+            </p>
           </div>
         </div>
       </div>

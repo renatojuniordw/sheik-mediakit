@@ -19,6 +19,7 @@ export const NumerosSection = () => {
       id="numeros"
       className="snap-section relative bg-black"
       style={{ backgroundColor: "var(--black)" }}
+      aria-labelledby="numeros-title"
     >
       {/* Background Decorative Grid */}
       <div
@@ -46,6 +47,7 @@ export const NumerosSection = () => {
             </motion.div>
 
             <motion.h2
+              id="numeros-title"
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -58,6 +60,17 @@ export const NumerosSection = () => {
                 ESCANCARAM IMPACTO.
               </span>
             </motion.h2>
+            <motion.p
+              initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+              whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="mt-4 max-w-2xl text-sm text-white/65 leading-relaxed"
+            >
+              Dados organizados para leitura comercial e referencia rapida de
+              agencias, com base no periodo{" "}
+              <span className="text-white">{STATS.period}</span>.
+            </motion.p>
           </div>
         </div>
 
