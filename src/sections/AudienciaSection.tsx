@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "../components/MotionProvider";
 import { AudienceBar } from "../components/AudienceBar";
 import { AUDIENCE } from "../data/audience";
 
@@ -27,7 +27,7 @@ export const AudienciaSection = () => {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-24 pb-16 relative z-10">
         {/* Header */}
         <div className="mb-12">
-          <motion.div
+          <m.div
             initial={prefersReduced ? false : { opacity: 0, x: -20 }}
             whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -37,9 +37,9 @@ export const AudienciaSection = () => {
             <p className="font-mono text-[10px] tracking-[4px] uppercase text-acid">
               Dados Reais
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             initial={prefersReduced ? false : { opacity: 0, y: 20 }}
             whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -50,7 +50,7 @@ export const AudienciaSection = () => {
             <span className="text-cyan drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
               CONTEÚDO.
             </span>
-          </motion.h2>
+          </m.h2>
         </div>
 
         {/* Global Grid Container */}
@@ -58,7 +58,7 @@ export const AudienciaSection = () => {
           {/* Main Stats Column — Gender & Age */}
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
             {/* Gênero Breakdown */}
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0 }}
               whileInView={prefersReduced ? {} : { opacity: 1 }}
               viewport={{ once: true }}
@@ -106,10 +106,10 @@ export const AudienciaSection = () => {
                   não-seguidores."
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Age Breakdown */}
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0 }}
               whileInView={prefersReduced ? {} : { opacity: 1 }}
               viewport={{ once: true }}
@@ -136,7 +136,7 @@ export const AudienciaSection = () => {
                   de engajamento e consumo.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Side Column — Geography */}

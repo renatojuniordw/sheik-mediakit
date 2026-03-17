@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from './MotionProvider'
 
 interface StatCardProps {
   value: string
@@ -12,7 +12,7 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 export const StatCard = ({ value, label, sub, highlight = false, delay = 0 }: StatCardProps) => {
   return (
-    <motion.div
+    <m.div
       initial={prefersReduced ? false : { opacity: 0, y: 30 }}
       whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -59,6 +59,6 @@ export const StatCard = ({ value, label, sub, highlight = false, delay = 0 }: St
           </p>
         </div>
       )}
-    </motion.div>
+    </m.div>
   )
 }

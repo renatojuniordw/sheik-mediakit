@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from './MotionProvider'
 
 interface FormatCardProps {
   num: string
@@ -14,7 +14,7 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 export const FormatCard = ({ num, title, icon, description, bullets, tag, delay = 0 }: FormatCardProps) => {
   return (
-    <motion.div
+    <m.div
       initial={prefersReduced ? false : { opacity: 0, y: 30 }}
       whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -70,6 +70,6 @@ export const FormatCard = ({ num, title, icon, description, bullets, tag, delay 
         </span>
         <div className="w-2 h-2 rounded-full bg-white/10 group-hover:bg-cyan group-hover:shadow-[0_0_8px_var(--cyan)] transition-all duration-500" />
       </div>
-    </motion.div>
+    </m.div>
   )
 }

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "../components/MotionProvider";
 import { StatCard } from "../components/StatCard";
 import { STATS } from "../data/stats";
 
@@ -34,7 +34,7 @@ export const NumerosSection = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0, x: -20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -44,9 +44,9 @@ export const NumerosSection = () => {
               <p className="font-mono text-[10px] tracking-[4px] uppercase text-cyan">
                 Performance em Tempo Real
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.h2
+            <m.h2
               id="numeros-title"
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
@@ -59,8 +59,8 @@ export const NumerosSection = () => {
               <span className="text-cyan drop-shadow-[0_0_15px_rgba(0,240,255,0.2)]">
                 ESCANCARAM IMPACTO.
               </span>
-            </motion.h2>
-            <motion.p
+            </m.h2>
+            <m.p
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,7 +70,7 @@ export const NumerosSection = () => {
               Dados organizados para leitura comercial e referencia rapida de
               agencias, com base no periodo{" "}
               <span className="text-white">{STATS.period}</span>.
-            </motion.p>
+            </m.p>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ export const NumerosSection = () => {
         {/* Breakdown bar — Fragmented stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
           {BREAKDOWN.map(({ label, value }, idx) => (
-            <motion.div
+            <m.div
               key={label}
               initial={prefersReduced ? false : { opacity: 0, y: 10 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export const NumerosSection = () => {
               <p className="font-display text-2xl text-white tracking-widest">
                 {value}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

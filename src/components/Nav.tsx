@@ -26,13 +26,7 @@ export const Nav = ({ activeSection }: NavProps) => {
     <nav
       role="navigation"
       aria-label="Navegação principal"
-      className="fixed top-0 left-0 right-0 z-50"
-      style={{
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        backgroundColor: "rgba(8,8,8,0.92)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
-      }}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/90 md:backdrop-blur-xl"
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
         {/* Logo */}

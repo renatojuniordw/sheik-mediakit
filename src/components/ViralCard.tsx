@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from './MotionProvider'
 
 interface Stat {
   label: string
@@ -18,7 +18,7 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 export const ViralCard = ({ views, title, date, url, stats, delay = 0 }: ViralCardProps) => {
   return (
-    <motion.div
+    <m.div
       initial={prefersReduced ? false : { opacity: 0, y: 30 }}
       whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -77,6 +77,6 @@ export const ViralCard = ({ views, title, date, url, stats, delay = 0 }: ViralCa
         </div>
         <span className="text-white/30 group-hover/cta:text-acid transition-colors duration-300 text-sm">→</span>
       </a>
-    </motion.div>
+    </m.div>
   )
 }

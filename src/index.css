@@ -22,7 +22,6 @@
 }
 
 html {
-  cursor: none;
   overflow-x: hidden;
 }
 
@@ -67,31 +66,37 @@ body {
 }
 
 /* Custom Cursor */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--cyan);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease;
-}
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: none;
+  }
 
-.cursor-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(0, 240, 255, 0.4);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--cyan);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease;
+  }
+
+  .cursor-ring {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(0, 240, 255, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Dot pulse for hero eyebrow */

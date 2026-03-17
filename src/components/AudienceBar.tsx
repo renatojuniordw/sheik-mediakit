@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from './MotionProvider'
 
 interface AudienceBarProps {
   label: string
@@ -21,7 +21,7 @@ export const AudienceBar = ({ label, pct, delay = 0, color = 'var(--cyan)' }: Au
         </span>
       </div>
       <div className="relative w-full h-1.5 bg-white/5 overflow-hidden">
-        <motion.div
+        <m.div
           className="absolute inset-y-0 left-0"
           style={{ 
             backgroundColor: color,

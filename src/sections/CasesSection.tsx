@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from '../components/MotionProvider'
 import { ViralCard } from '../components/ViralCard'
 import { VIRALS } from '../data/virals'
 
@@ -13,7 +13,7 @@ export const CasesSection = () => {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-24 pb-16 relative z-10">
         {/* Header */}
         <div className="mb-12">
-          <motion.div
+          <m.div
             initial={prefersReduced ? false : { opacity: 0, x: -20 }}
             whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -23,9 +23,9 @@ export const CasesSection = () => {
             <p className="font-mono text-[10px] tracking-[4px] uppercase text-acid">
               Performance Viral
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             initial={prefersReduced ? false : { opacity: 0, y: 20 }}
             whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ export const CasesSection = () => {
             className="font-display text-[clamp(44px,5vw,72px)] leading-none tracking-tighter text-white"
           >
             VÍDEOS QUE <span className="text-cyan drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">EXPLODIRAM.</span>
-          </motion.h2>
+          </m.h2>
         </div>
 
         {/* Cards */}
@@ -52,7 +52,7 @@ export const CasesSection = () => {
         </div>
 
         {/* Footer note */}
-        <motion.div
+        <m.div
           initial={prefersReduced ? false : { opacity: 0 }}
           whileInView={prefersReduced ? {} : { opacity: 1 }}
           viewport={{ once: true }}
@@ -63,7 +63,7 @@ export const CasesSection = () => {
           <p className="font-mono text-[9px] tracking-widest text-white/70 uppercase">
             Dados auditáveis diretamente via painel profissional do Instagram.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

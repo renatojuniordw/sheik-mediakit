@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "../components/MotionProvider";
 import { ContactLinks } from "../components/ContactLinks";
 import { STATS } from "../data/stats";
 
@@ -40,7 +40,7 @@ export const ContatoSection = () => {
     >
       <div className="flex-1 flex flex-col md:flex-row relative z-10">
         {/* Left — Dynamic Lead/Cyan */}
-        <motion.div
+        <m.div
           initial={prefersReduced ? false : { opacity: 0, x: -30 }}
           whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,7 @@ export const ContatoSection = () => {
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-[100px] pointer-events-none" />
 
           <div className="relative z-10">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -62,7 +62,7 @@ export const ContatoSection = () => {
               <p className="font-mono text-[10px] tracking-[4px] uppercase text-cyan font-bold">
                 Agendamento Direto
               </p>
-            </motion.div>
+            </m.div>
 
             <h2
               id="contato-title"
@@ -96,10 +96,10 @@ export const ContatoSection = () => {
           <div className="mt-12 relative z-10">
             <ContactLinks />
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Right — Stats Summary */}
-        <motion.div
+        <m.div
           initial={prefersReduced ? false : { opacity: 0, x: 30 }}
           whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -166,7 +166,7 @@ export const ContatoSection = () => {
               </span>
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

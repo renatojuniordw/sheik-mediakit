@@ -8,6 +8,7 @@ const PAGE_TITLE =
   "Diego Sheik Midia Kit | Criador de Conteudo e Humor em Recife";
 const PAGE_DESCRIPTION =
   "Midia kit oficial de Diego Sheik, criador de conteudo de humor em Recife-PE. Dados de audiencia, formatos de parceria e metricas reais para publis, reels e campanhas.";
+const SITE_URL = "https://sheik.unificando.com.br/";
 const PAGE_KEYWORDS = [
   "Diego Sheik",
   "midia kit",
@@ -18,7 +19,7 @@ const PAGE_KEYWORDS = [
   "publi Instagram",
   "campanha com influenciador",
 ];
-const SOCIAL_IMAGE = "/assets/diego-hero.jpg";
+const SOCIAL_IMAGE = `${SITE_URL}assets/diego-hero.jpg`;
 const INSTAGRAM_URL = "https://instagram.com/diegosheik_";
 const WHATSAPP_URL = "https://wa.me/5581999591979";
 const CONTACT_EMAIL = "diegosheik.contato@gmail.com";
@@ -56,6 +57,7 @@ const structuredData = {
       description: PAGE_DESCRIPTION,
       dateModified: LAST_UPDATED,
       inLanguage: "pt-BR",
+      url: SITE_URL,
       mainEntity: {
         "@type": "Person",
         name: "Diego Sheik",
@@ -76,6 +78,7 @@ const structuredData = {
       name: "Midia Kit Diego Sheik",
       headline: "Dados de audiencia, formatos comerciais e desempenho de campanhas",
       description: PAGE_DESCRIPTION,
+      url: SITE_URL,
       author: {
         "@type": "Person",
         name: "Diego Sheik",
@@ -168,6 +171,7 @@ export const SeoMeta = () => {
     );
     setMeta('meta[name="author"]', { name: "author" }, "Diego Sheik");
     setMeta('meta[name="theme-color"]', { name: "theme-color" }, "#020202");
+    setMeta('meta[property="og:url"]', { property: "og:url" }, SITE_URL);
     setMeta(
       'meta[property="og:title"]',
       { property: "og:title" },
@@ -189,7 +193,12 @@ export const SeoMeta = () => {
       PAGE_DESCRIPTION,
     );
     setMeta('meta[name="twitter:image"]', { name: "twitter:image" }, SOCIAL_IMAGE);
-    setLink('link[rel="alternate"][hreflang="pt-BR"]', { rel: "alternate", hreflang: "pt-BR" }, window.location.href);
+    setLink('link[rel="canonical"]', { rel: "canonical" }, SITE_URL);
+    setLink(
+      'link[rel="alternate"][hreflang="pt-BR"]',
+      { rel: "alternate", hreflang: "pt-BR" },
+      SITE_URL,
+    );
 
     let script = document.getElementById("seo-jsonld");
     if (!script) {

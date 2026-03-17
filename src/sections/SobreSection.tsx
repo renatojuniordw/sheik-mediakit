@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "../components/MotionProvider";
 import { useScrollSnap } from "../hooks/useScrollSnap";
 
 const prefersReduced = window.matchMedia(
@@ -37,7 +37,7 @@ export const SobreSection = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 h-full items-center">
           {/* Left — content */}
           <div className="lg:w-[55%]">
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0, x: -20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -46,9 +46,9 @@ export const SobreSection = () => {
               <p className="font-mono text-[10px] tracking-[4px] uppercase text-cyan border-b border-cyan/30 pb-1">
                 A Jornada do Sheik
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.h2
+            <m.h2
               id="sobre-title"
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
@@ -61,10 +61,10 @@ export const SobreSection = () => {
               <span className="text-cyan underline decoration-cyan/30 decoration-4 underline-offset-8 italic drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
                 VIRAL O TEMPO TODO.
               </span>
-            </motion.h2>
+            </m.h2>
 
             <div className="space-y-6 max-w-xl">
-              <motion.p
+              <m.p
                 initial={prefersReduced ? false : { opacity: 0, y: 20 }}
                 whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -74,9 +74,9 @@ export const SobreSection = () => {
                 Diego é o reflexo da autenticidade recifense. Ele transforma o cotidiano e as
                 "piores" perguntas em conteudo magnetico, com linguagem local,
                 humor espontaneo e forte potencial de compartilhamento.
-              </motion.p>
+              </m.p>
 
-              <motion.p
+              <m.p
                 initial={prefersReduced ? false : { opacity: 0, y: 20 }}
                 whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -90,9 +90,9 @@ export const SobreSection = () => {
                 </span>
                 . O resultado? Mais de 50 milhões de views e uma audiência que
                 respira cada frame.
-              </motion.p>
+              </m.p>
 
-              <motion.p
+              <m.p
                 initial={prefersReduced ? false : { opacity: 0, y: 20 }}
                 whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -102,11 +102,11 @@ export const SobreSection = () => {
                 Para marcas, isso significa uma entrega que combina alcance,
                 contexto cultural e insercao natural do produto em formatos que
                 ja performam organicamente no Instagram.
-              </motion.p>
+              </m.p>
             </div>
 
             {/* Pills */}
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0 }}
               whileInView={prefersReduced ? {} : { opacity: 1 }}
               viewport={{ once: true }}
@@ -121,9 +121,9 @@ export const SobreSection = () => {
                   {pill}
                 </span>
               ))}
-            </motion.div>
+            </m.div>
 
-            <motion.button
+            <m.button
               initial={prefersReduced ? false : { opacity: 0 }}
               whileInView={prefersReduced ? {} : { opacity: 1 }}
               viewport={{ once: true }}
@@ -133,13 +133,13 @@ export const SobreSection = () => {
             >
               <span className="w-12 h-px bg-acid transition-all duration-300 group-hover:w-20" />
               Explorar métricas —
-            </motion.button>
+            </m.button>
           </div>
 
           {/* Right — Visual Stack */}
           <div className="lg:w-[45%] flex flex-col gap-6 relative">
             {/* Main Photo with technical frame */}
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0, scale: 0.9 }}
               whileInView={prefersReduced ? {} : { opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -160,10 +160,10 @@ export const SobreSection = () => {
                 />
                 <div className="absolute inset-0 bg-cyan/5 mix-blend-overlay" />
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Quick Metrics Grid */}
-            <motion.div
+            <m.div
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -186,7 +186,7 @@ export const SobreSection = () => {
                   </p>
                 </div>
               ))}
-            </motion.div>
+            </m.div>
 
             <p className="font-mono text-[9px] tracking-[3px] uppercase text-white/45">
               Posicionamento: humor regional, branded content e alcance

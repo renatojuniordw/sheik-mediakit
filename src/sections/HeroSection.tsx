@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "../components/MotionProvider";
 import { useScrollSnap } from "../hooks/useScrollSnap";
 
 const prefersReduced = window.matchMedia(
@@ -72,7 +72,7 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-6 text-center pt-20">
         {/* Eyebrow */}
-        <motion.div
+        <m.div
           {...fadeUp(0.1)}
           className="flex items-center gap-3 mb-4 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm"
         >
@@ -83,22 +83,22 @@ export const HeroSection = () => {
           <span className="font-mono text-[10px] tracking-[4px] uppercase text-white/80">
             Criador de Conteúdo · Recife-PE
           </span>
-        </motion.div>
+        </m.div>
 
         {/* Big Typography Hero */}
         <div className="relative mb-6">
           {/* Decorative Ghost Text */}
-          <motion.span
+          <m.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 0.05, scale: 1 }}
             transition={{ duration: 1.5 }}
             className="absolute -top-1/2 left-1/2 -translate-x-1/2 font-display text-[25vw] leading-none select-none pointer-events-none text-white whitespace-nowrap"
           >
             SHEIK
-          </motion.span>
+          </m.span>
 
           <div className="relative z-10">
-            <motion.h1
+            <m.h1
               id="hero-title"
               {...fadeUp(0.2)}
               className="font-display text-[clamp(60px,12vw,160px)] leading-[0.85] tracking-tighter text-white"
@@ -110,19 +110,19 @@ export const HeroSection = () => {
               >
                 SHEIK
               </span>
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               {...fadeUp(0.3)}
               className="font-mono text-[10px] tracking-[4px] uppercase text-white/65 mt-3"
             >
               Midia kit oficial para publicidade, Reels patrocinados e campanhas
               com marcas
-            </motion.p>
+            </m.p>
           </div>
         </div>
 
         {/* Description */}
-        <motion.div
+        <m.div
           {...fadeUp(0.45)}
           className="max-w-2xl bg-black/40 border border-white/5 p-5 backdrop-blur-md relative overflow-hidden group"
         >
@@ -142,10 +142,10 @@ export const HeroSection = () => {
             de compartilhamento para campanhas com marcas que buscam alcance
             organico e lembranca de mensagem.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* CTAs */}
-        <motion.div
+        <m.div
           {...fadeUp(0.6)}
           className="flex flex-col sm:flex-row items-center gap-4 mt-6"
         >
@@ -185,7 +185,7 @@ export const HeroSection = () => {
           >
             Ver Métricas →
           </button>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Ticker — absolute bottom */}
