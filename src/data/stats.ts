@@ -1,0 +1,18 @@
+export const STATS = {
+  views: '15,7MI',
+  interactions: '2,2MI',
+  accountsReached: '5,3MI',
+  shares: '616K',
+  followers: '38.201',
+  newFollowers: '9.202',
+  growth: '+25,9%',
+  profileVisits: '37.448',
+  reposts: '43.612',
+  saves: '26.197',
+  comments: '11.713',
+  likes: '912K',
+  nonFollowerInteractions: '94,1%',
+  nonFollowerViews: '89,1%',
+  reelsInteractionShare: '98,4%',
+  period: '12 Fev – 13 Mar 2025',
+} as const
