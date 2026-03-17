@@ -41,7 +41,7 @@ export const ContatoSection = () => {
             >
               <div className="w-8 h-px bg-cyan/30" />
               <p className="font-mono text-[10px] tracking-[4px] uppercase text-cyan font-bold">
-                Direct Booking
+                Agendamento Direto
               </p>
             </motion.div>
 
@@ -87,7 +87,7 @@ export const ContatoSection = () => {
                   {value}
                 </p>
                 <p className="font-mono text-[9px] tracking-[3px] uppercase text-white/55 mt-2">
-                  Key Metric
+                  Indicador-Chave
                 </p>
               </div>
               <p className="font-mono text-[10px] tracking-widest uppercase text-white font-bold text-right max-w-[140px] leading-tight">

@@ -35,7 +35,7 @@ export const StatCard = ({ value, label, sub, highlight = false, delay = 0 }: St
           >
             {value}
           </p>
-          {!highlight && <span className="font-mono text-[8px] opacity-60 mt-2 text-white/60">METRIC_00{Math.floor(delay * 10) || 1}</span>}
+          {!highlight && <span className="font-mono text-[8px] opacity-60 mt-2 text-white/60">MÉTRICA_00{Math.floor(delay * 10) || 1}</span>}
         </div>
         
         <p

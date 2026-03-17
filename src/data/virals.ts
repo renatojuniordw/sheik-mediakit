@@ -3,7 +3,7 @@ export const VIRALS = [
     views: '12,4MI',
     title: 'Pense numa raça insuportável...',
     date: '18 nov 2025 · 0:12',
-    insight: '/assets/insight-raca.png',
+    url: 'https://www.instagram.com/reel/DRNsXWhjyuY/?igsh=a213cXN2MXRsMGxv',
     stats: [
       { label: 'curtidas',         value: '856K' },
       { label: 'comentários',      value: '17K' },
@@ -17,7 +17,7 @@ export const VIRALS = [
     views: '2,7MI',
     title: 'Se seu amigo fosse uma marca, qual seria?',
     date: '1 dez 2025 · 0:08',
-    insight: '/assets/insight-amigo.png',
+    url: 'https://www.instagram.com/reel/DTtLnZ1j8LO/?igsh=MXRrNm16ZjFoMGFwMw==',
     stats: [
       { label: 'curtidas',         value: '133K' },
       { label: 'comentários',      value: '954' },
@@ -31,7 +31,7 @@ export const VIRALS = [
     views: '2,3MI',
     title: 'Moletom ao meio dia não dá',
     date: '24 nov 2025 · 0:08',
-    insight: '/assets/insight-moletom.png',
+    url: 'https://www.instagram.com/reel/DRcspzuD-c9/?igsh=MWczZHM2eHY0dnRpcA==',
     stats: [
       { label: 'curtidas',         value: '146K' },
       { label: 'comentários',      value: '3,3K' },

@@ -44,7 +44,7 @@ export const CasesSection = () => {
               views={viral.views}
               title={viral.title}
               date={viral.date}
-              insight={viral.insight}
+              url={viral.url}
               stats={viral.stats}
               delay={0.1 * (i + 1)}
             />

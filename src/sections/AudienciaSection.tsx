@@ -36,7 +36,7 @@ export const AudienciaSection = () => {
           >
             <span className="w-2 h-2 rounded-full bg-cyan shadow-[0_0_8px_var(--cyan)]" />
             <p className="font-mono text-[10px] tracking-[4px] uppercase text-acid">
-              Data Insights · Instagram API
+              Dados Reais · API do Instagram
             </p>
           </motion.div>
           
@@ -136,7 +136,7 @@ export const AudienciaSection = () => {
                 ))}
               </div>
 
-              <SectionTitle>Global Reach</SectionTitle>
+              <SectionTitle>Alcance Global</SectionTitle>
               <div className="flex flex-col gap-3 mt-6">
                 {AUDIENCE.countries.map(({ country, pct }) => (
                   <div key={country} className="flex items-center justify-between py-2 border-b border-white/5 group">

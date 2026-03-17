@@ -34,19 +34,19 @@ export const ContactLinks = () => (
   <div className="bg-white/5 backdrop-blur-md border border-white/10">
     <ContactLink
       href="mailto:diegosheik.contato@gmail.com"
-      label="Business Email"
+      label="E-mail Comercial"
       sub="diegosheik.contato@gmail.com"
       icon="✉️"
     />
     <ContactLink
       href="https://wa.me/5581999591979"
-      label="Direct Line"
+      label="Contato Direto"
       sub="(81) 99959-1979"
       icon="💬"
     />
     <ContactLink
       href="https://instagram.com/diegosheik_"
-      label="Social Media"
+      label="Redes Sociais"
       sub="@diegosheik_"
       icon="📸"
     />
