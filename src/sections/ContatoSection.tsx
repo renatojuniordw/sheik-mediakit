@@ -88,7 +88,7 @@ export const ContatoSection = () => {
               <p>
                 Base de metricas: <span className="text-white">{STATS.period}</span>.
                 Ultima atualizacao editorial:{" "}
-                <span className="text-white">17 mar 2026</span>.
+                <span className="text-white">28 abr 2026</span>.
               </p>
             </div>
           </div>
