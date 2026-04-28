@@ -150,19 +150,24 @@ export const ContatoSection = () => {
           </div>
 
           {/* Bottom Branding */}
-          <div className="mt-auto p-10 flex justify-between items-center bg-black/20">
-            <p className="font-mono text-[8px] text-white/45 tracking-widest uppercase italic">
+          <div className="mt-auto px-10 py-7 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/10 bg-black/20">
+            <p className="font-mono text-[9px] text-white/40 tracking-widest uppercase">
               © 2026 Diego Sheik Media Kit
             </p>
             <a
-              href="http://unificando.com.br/"
+              href="https://unificando.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-1.5 font-mono text-[8px] tracking-widest uppercase text-white/30 hover:text-cyan transition-colors duration-300 italic"
+              className="group flex items-center gap-2.5"
             >
-              Dev por
-              <span className="text-cyan/60 group-hover:text-cyan transition-colors duration-300 not-italic font-bold">
+              <span className="font-mono text-[10px] tracking-[2px] uppercase text-white/50 group-hover:text-white/80 transition-colors duration-300">
+                Site criado pela
+              </span>
+              <span className="font-display text-sm font-bold tracking-tight text-white group-hover:text-cyan group-hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.5)] transition-all duration-300">
                 Unificando
+              </span>
+              <span className="font-mono text-[10px] tracking-[2px] uppercase text-white/50 group-hover:text-white/80 transition-colors duration-300">
+                — quero o meu
               </span>
             </a>
           </div>

@@ -1,18 +1,20 @@
+import instagramData from '../../public/instagram.json'
+
 export const STATS = {
-  views: '15,7MI',
-  interactions: '2,2MI',
-  accountsReached: '5,3MI',
-  shares: '616K',
-  followers: '38.201',
-  newFollowers: '9.202',
-  growth: '+25,9%',
-  profileVisits: '37.448',
-  reposts: '43.612',
-  saves: '26.197',
-  comments: '11.713',
-  likes: '912K',
-  nonFollowerInteractions: '94,1%',
-  nonFollowerViews: '89,1%',
-  reelsInteractionShare: '98,4%',
-  period: '12 Fev – 13 Mar 2025',
+  views: instagramData.insights.views_30d,
+  interactions: instagramData.insights.interactions_30d,
+  accountsReached: instagramData.insights.accounts_reached_30d,
+  shares: '539K', // Approximate from 539,125
+  followers: instagramData.profile.followers.toLocaleString('pt-BR'),
+  newFollowers: instagramData.profile.followers_growth_30d.toLocaleString('pt-BR'),
+  growth: '+24,0%', // From image
+  profileVisits: '41.305',
+  reposts: '68.331',
+  saves: '39.490',
+  comments: '13.297',
+  likes: '1.27MI',
+  nonFollowerInteractions: instagramData.insights.non_followers_interactions,
+  nonFollowerViews: instagramData.insights.non_followers_views,
+  reelsInteractionShare: '99,9%',
+  period: '28 Mar – 26 Abr 2026',
 } as const

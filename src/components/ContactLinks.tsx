@@ -44,13 +44,6 @@ export const ContactLinks = () => (
       description="Canal ideal para briefings, propostas comerciais e envio de materiais."
     />
     <ContactLink
-      href="https://wa.me/5581999591979"
-      label="Contato Direto"
-      sub="(81) 99959-1979"
-      icon="💬"
-      description="Atendimento rapido para orcamentos, disponibilidade e alinhamento de campanha."
-    />
-    <ContactLink
       href="https://instagram.com/diegosheik_"
       label="Redes Sociais"
       sub="@diegosheik_"
