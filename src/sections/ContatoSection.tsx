@@ -155,7 +155,7 @@ export const ContatoSection = () => {
               © 2026 Diego Sheik Media Kit
             </p>
             <a
-              href="https://unificando.com.br/"
+              href="https://renatobezerra.com.br/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2.5"
@@ -164,7 +164,7 @@ export const ContatoSection = () => {
                 Site criado pela
               </span>
               <span className="font-display text-sm font-bold tracking-tight text-white group-hover:text-cyan group-hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.5)] transition-all duration-300">
-                Unificando
+                Renato Bezerra
               </span>
               <span className="font-mono text-[10px] tracking-[2px] uppercase text-white/50 group-hover:text-white/80 transition-colors duration-300">
                 — quero o meu
